@@ -36,8 +36,8 @@ public partial class AppDbContext : DbContext
             entity.Property(e => e.Name).HasMaxLength(500);
             entity.Property(e => e.Status).HasDefaultValue(0);
 
-            entity.HasOne(d => d.Employee).WithMany(p => p.CashBoxes)
-                .HasForeignKey(d => d.EmployeeId)
+            entity.HasOne(d => d.Employee).WithOne(p => p.CashBox)
+                .HasForeignKey("EmployeeId")
                 .OnDelete(DeleteBehavior.SetNull)
                 .HasConstraintName("FK_CashBoxes_Employees");
         });
