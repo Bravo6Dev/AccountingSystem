@@ -1,0 +1,17 @@
+C:\Users\DELL\Desktop\Projects\PersonalProjects\AccountingSystem\Applications\bin\Debug\net8.0\Applications.deps.json
+C:\Users\DELL\Desktop\Projects\PersonalProjects\AccountingSystem\Applications\bin\Debug\net8.0\Applications.dll
+C:\Users\DELL\Desktop\Projects\PersonalProjects\AccountingSystem\Applications\bin\Debug\net8.0\Applications.pdb
+C:\Users\DELL\Desktop\Projects\PersonalProjects\AccountingSystem\Applications\obj\Debug\net8.0\Applications.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DELL\Desktop\Projects\PersonalProjects\AccountingSystem\Applications\obj\Debug\net8.0\Applications.AssemblyInfoInputs.cache
+C:\Users\DELL\Desktop\Projects\PersonalProjects\AccountingSystem\Applications\obj\Debug\net8.0\Applications.AssemblyInfo.cs
+C:\Users\DELL\Desktop\Projects\PersonalProjects\AccountingSystem\Applications\obj\Debug\net8.0\Applications.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Desktop\Projects\PersonalProjects\AccountingSystem\Applications\obj\Debug\net8.0\Applications.dll
+C:\Users\DELL\Desktop\Projects\PersonalProjects\AccountingSystem\Applications\obj\Debug\net8.0\refint\Applications.dll
+C:\Users\DELL\Desktop\Projects\PersonalProjects\AccountingSystem\Applications\obj\Debug\net8.0\Applications.pdb
+C:\Users\DELL\Desktop\Projects\PersonalProjects\AccountingSystem\Applications\obj\Debug\net8.0\ref\Applications.dll
+C:\Users\DELL\Desktop\Projects\PersonalProjects\AccountingSystem\Applications\bin\Debug\net8.0\Domain.dll
+C:\Users\DELL\Desktop\Projects\PersonalProjects\AccountingSystem\Applications\bin\Debug\net8.0\Infrastructure.dll
+C:\Users\DELL\Desktop\Projects\PersonalProjects\AccountingSystem\Applications\bin\Debug\net8.0\Domain.pdb
+C:\Users\DELL\Desktop\Projects\PersonalProjects\AccountingSystem\Applications\bin\Debug\net8.0\Infrastructure.pdb
+C:\Users\DELL\Desktop\Projects\PersonalProjects\AccountingSystem\Applications\obj\Debug\net8.0\Applications.csproj.AssemblyReference.cache
+C:\Users\DELL\Desktop\Projects\PersonalProjects\AccountingSystem\Applications\obj\Debug\net8.0\Applications.csproj.CopyComplete
