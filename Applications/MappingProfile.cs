@@ -23,6 +23,10 @@ namespace Applications
                 .ForMember(dest => dest.CreateDate, opt => opt.MapFrom(_ => DateTime.Now))
                 .ForMember(dest => dest.Status, opt => opt.MapFrom(_ => DataStatus.Active)) 
                 .ForMember(dest => dest.CashBox, opt => opt.MapFrom(src => src.CashBox));
+
+            CreateMap<Employee, EmployeeDto>()
+                .ForMember(dest => dest.Permission, opt => opt.MapFrom(src => src.Permission.Name))
+                .ForMember(dest => dest.CashBoxName, opt => opt.MapFrom(src => src.CashBox != null ? src.CashBox.Name : string.Empty));
         }
     }
 }
