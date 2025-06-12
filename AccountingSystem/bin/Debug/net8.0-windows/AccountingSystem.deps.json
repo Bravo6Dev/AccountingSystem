@@ -10,8 +10,8 @@
         "dependencies": {
           "Applications": "1.0.0",
           "AutoMapper": "14.0.0",
-          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
           "Domain": "1.0.0",
+          "Guna.UI2.WinForms": "2.0.4.7",
           "Infrastructure": "1.0.0",
           "Microsoft.EntityFrameworkCore.Design": "9.0.6",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.6",
@@ -30,18 +30,6 @@
           "lib/net8.0/AutoMapper.dll": {
             "assemblyVersion": "14.0.0.0",
             "fileVersion": "14.0.0.0"
-          }
-        }
-      },
-      "AutoMapper.Extensions.Microsoft.DependencyInjection/12.0.1": {
-        "dependencies": {
-          "AutoMapper": "14.0.0",
-          "Microsoft.Extensions.Options": "9.0.6"
-        },
-        "runtime": {
-          "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {
-            "assemblyVersion": "12.0.0.0",
-            "fileVersion": "12.0.1.0"
           }
         }
       },
@@ -77,6 +65,25 @@
           "lib/netstandard2.0/Azure.Identity.dll": {
             "assemblyVersion": "1.11.4.0",
             "fileVersion": "1.1100.424.31005"
+          }
+        }
+      },
+      "BCrypt.Net-Next/4.0.3": {
+        "runtime": {
+          "lib/net6.0/BCrypt.Net-Next.dll": {
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.0.3.0"
+          }
+        }
+      },
+      "Guna.UI2.WinForms/2.0.4.7": {
+        "dependencies": {
+          "System.Management": "7.0.0"
+        },
+        "runtime": {
+          "lib/net7.0-windows7.0/Guna.UI2.dll": {
+            "assemblyVersion": "2.0.4.7",
+            "fileVersion": "2.0.4.7"
           }
         }
       },
@@ -1032,7 +1039,7 @@
       "Microsoft.Win32.SystemEvents/6.0.0": {},
       "Mono.TextTemplating/3.0.0": {
         "dependencies": {
-          "System.CodeDom": "6.0.0"
+          "System.CodeDom": "7.0.0"
         },
         "runtime": {
           "lib/net6.0/Mono.TextTemplating.dll": {
@@ -1053,7 +1060,7 @@
           }
         }
       },
-      "System.CodeDom/6.0.0": {},
+      "System.CodeDom/7.0.0": {},
       "System.Collections.Immutable/7.0.0": {},
       "System.Composition/7.0.0": {
         "dependencies": {
@@ -1184,6 +1191,25 @@
           }
         }
       },
+      "System.Management/7.0.0": {
+        "dependencies": {
+          "System.CodeDom": "7.0.0"
+        },
+        "runtime": {
+          "lib/net7.0/System.Management.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "7.0.22.51805"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net7.0/System.Management.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "7.0.22.51805"
+          }
+        }
+      },
       "System.Memory/4.5.4": {},
       "System.Memory.Data/1.0.2": {
         "dependencies": {
@@ -1292,6 +1318,8 @@
       },
       "Applications/1.0.0": {
         "dependencies": {
+          "AutoMapper": "14.0.0",
+          "BCrypt.Net-Next": "4.0.3",
           "Domain": "1.0.0",
           "Infrastructure": "1.0.0"
         },
@@ -1332,13 +1360,6 @@
       "path": "automapper/14.0.0",
       "hashPath": "automapper.14.0.0.nupkg.sha512"
     },
-    "AutoMapper.Extensions.Microsoft.DependencyInjection/12.0.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-+g/K+Vpe3gGMKGzjslMOdqNlkikScDjWfVvmWTayrDHaG/n2pPmFBMa+jKX1r/h6BDGFdkyRjAuhFE3ykW+r1g==",
-      "path": "automapper.extensions.microsoft.dependencyinjection/12.0.1",
-      "hashPath": "automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512"
-    },
     "Azure.Core/1.38.0": {
       "type": "package",
       "serviceable": true,
@@ -1352,6 +1373,20 @@
       "sha512": "sha512-Sf4BoE6Q3jTgFkgBkx7qztYOFELBCo+wQgpYDwal/qJ1unBH73ywPztIJKXBXORRzAeNijsuxhk94h0TIMvfYg==",
       "path": "azure.identity/1.11.4",
       "hashPath": "azure.identity.1.11.4.nupkg.sha512"
+    },
+    "BCrypt.Net-Next/4.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-W+U9WvmZQgi5cX6FS5GDtDoPzUCV4LkBLkywq/kRZhuDwcbavOzcDAr3LXJFqHUi952Yj3LEYoWW0jbEUQChsA==",
+      "path": "bcrypt.net-next/4.0.3",
+      "hashPath": "bcrypt.net-next.4.0.3.nupkg.sha512"
+    },
+    "Guna.UI2.WinForms/2.0.4.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8BdBYsfnntuICbFMHIZsd5morwURN8Ucsvq7wJeyLV1Z1ze6CAIxVKEirufgjGIiXfF0M0sCr9EVFloZSazWew==",
+      "path": "guna.ui2.winforms/2.0.4.7",
+      "hashPath": "guna.ui2.winforms.2.0.4.7.nupkg.sha512"
     },
     "Humanizer.Core/2.14.1": {
       "type": "package",
@@ -1794,12 +1829,12 @@
       "path": "system.clientmodel/1.0.0",
       "hashPath": "system.clientmodel.1.0.0.nupkg.sha512"
     },
-    "System.CodeDom/6.0.0": {
+    "System.CodeDom/7.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-CPc6tWO1LAer3IzfZufDBRL+UZQcj5uS207NHALQzP84Vp/z6wF0Aa0YZImOQY8iStY0A2zI/e3ihKNPfUm8XA==",
-      "path": "system.codedom/6.0.0",
-      "hashPath": "system.codedom.6.0.0.nupkg.sha512"
+      "sha512": "sha512-GLltyqEsE5/3IE+zYRP5sNa1l44qKl9v+bfdMcwg+M9qnQf47wK3H0SUR/T+3N4JEQXF3vV4CSuuo0rsg+nq2A==",
+      "path": "system.codedom/7.0.0",
+      "hashPath": "system.codedom.7.0.0.nupkg.sha512"
     },
     "System.Collections.Immutable/7.0.0": {
       "type": "package",
@@ -1898,6 +1933,13 @@
       "sha512": "sha512-0nlr0reXrRmkZNKifKqh2DgGhQgfkT7Qa3gQxIn/JI7/y3WDiTz67M+Sq3vFhUqcG8O5zVrpqHvIHeGPGUBsEw==",
       "path": "system.io.pipelines/9.0.6",
       "hashPath": "system.io.pipelines.9.0.6.nupkg.sha512"
+    },
+    "System.Management/7.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-A4jed4QUviDOm7fJNKAJObEAEkEUXmkGL/w0iyCYTzrl1rezTj8LGFHfsVst4Vb9JwFcTpboiDrvdST48avBpw==",
+      "path": "system.management/7.0.0",
+      "hashPath": "system.management.7.0.0.nupkg.sha512"
     },
     "System.Memory/4.5.4": {
       "type": "package",

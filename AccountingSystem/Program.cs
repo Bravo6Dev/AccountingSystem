@@ -1,5 +1,9 @@
-﻿
+﻿using AccountingSystem.Forms;
+using Applications.Services;
+using Domain.Interfaces.Repos;
+using Domain.Interfaces.Services;
 using Infrastructure;
+using Infrastructure.Repos;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -17,8 +21,10 @@ namespace AccountingSystem
             ApplicationConfiguration.Initialize();
 
             var host = CreateHostBuilder().Build();
-            Application.Run();
+            var serviceManager = host.Services.GetRequiredService<IServiceManager>();
+            Application.Run(new Frm_Login(serviceManager));
         }
+
 
         static IHostBuilder CreateHostBuilder() =>
             Host.CreateDefaultBuilder()
@@ -31,6 +37,10 @@ namespace AccountingSystem
                     IConfiguration config = context.Configuration;
 
                     services.AddDbContext<AppDbContext>(o => o.UseSqlServer(config.GetConnectionString("Constr")));
+                    services.AddScoped<IUnitOfWork, UnitOfwork>();
+                    services.AddScoped<IPasswordService, PasswordService>();
+                    services.AddScoped<IServiceManager, ServiceManager>();
+                    services.AddAutoMapper(typeof(Applications.MappingProfile));
                 });
     }
 }

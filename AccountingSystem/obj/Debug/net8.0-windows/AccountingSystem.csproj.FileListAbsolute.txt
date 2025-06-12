@@ -162,7 +162,6 @@ C:\Users\DELL\Desktop\Projects\PersonalProjects\AccountingSystem\AccountingSyste
 C:\Users\DELL\Desktop\Projects\PersonalProjects\AccountingSystem\AccountingSystem\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.Messages.dll
 C:\Users\DELL\Desktop\Projects\PersonalProjects\AccountingSystem\AccountingSystem\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
 C:\Users\DELL\Desktop\Projects\PersonalProjects\AccountingSystem\AccountingSystem\bin\Debug\net8.0-windows\AutoMapper.dll
-C:\Users\DELL\Desktop\Projects\PersonalProjects\AccountingSystem\AccountingSystem\bin\Debug\net8.0-windows\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\DELL\Desktop\Projects\PersonalProjects\AccountingSystem\AccountingSystem\bin\Debug\net8.0-windows\Applications.dll
 C:\Users\DELL\Desktop\Projects\PersonalProjects\AccountingSystem\AccountingSystem\bin\Debug\net8.0-windows\Domain.dll
 C:\Users\DELL\Desktop\Projects\PersonalProjects\AccountingSystem\AccountingSystem\bin\Debug\net8.0-windows\Infrastructure.dll
@@ -170,3 +169,12 @@ C:\Users\DELL\Desktop\Projects\PersonalProjects\AccountingSystem\AccountingSyste
 C:\Users\DELL\Desktop\Projects\PersonalProjects\AccountingSystem\AccountingSystem\bin\Debug\net8.0-windows\Domain.pdb
 C:\Users\DELL\Desktop\Projects\PersonalProjects\AccountingSystem\AccountingSystem\bin\Debug\net8.0-windows\Infrastructure.pdb
 C:\Users\DELL\Desktop\Projects\PersonalProjects\AccountingSystem\AccountingSystem\obj\Debug\net8.0-windows\AccountingSystem.csproj.CopyComplete
+C:\Users\DELL\Desktop\Projects\PersonalProjects\AccountingSystem\AccountingSystem\bin\Debug\net8.0-windows\BCrypt.Net-Next.dll
+C:\Users\DELL\Desktop\Projects\PersonalProjects\AccountingSystem\AccountingSystem\obj\Debug\net8.0-windows\AccountingSystem.sourcelink.json
+C:\Users\DELL\Desktop\Projects\PersonalProjects\AccountingSystem\AccountingSystem\obj\Debug\net8.0-windows\AccountingSystem.Properties.Resources.resources
+C:\Users\DELL\Desktop\Projects\PersonalProjects\AccountingSystem\AccountingSystem\obj\Debug\net8.0-windows\AccountingSystem.csproj.GenerateResource.cache
+C:\Users\DELL\Desktop\Projects\PersonalProjects\AccountingSystem\AccountingSystem\obj\Debug\net8.0-windows\AccountingSystem.Forms.Frm_Login.resources
+C:\Users\DELL\Desktop\Projects\PersonalProjects\AccountingSystem\AccountingSystem\bin\Debug\net8.0-windows\Guna.UI2.dll
+C:\Users\DELL\Desktop\Projects\PersonalProjects\AccountingSystem\AccountingSystem\bin\Debug\net8.0-windows\System.Management.dll
+C:\Users\DELL\Desktop\Projects\PersonalProjects\AccountingSystem\AccountingSystem\bin\Debug\net8.0-windows\runtimes\win\lib\net7.0\System.Management.dll
+C:\Users\DELL\Desktop\Projects\PersonalProjects\AccountingSystem\AccountingSystem\obj\Debug\net8.0-windows\AccountingSystem.Controls.TopBar.resources

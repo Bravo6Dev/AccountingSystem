@@ -32,7 +32,9 @@ namespace Applications.Services
         {
             if (await unitOfWork.EmployeeRepo.IsExistAsync(e => e.PhoneNumber == employee.PhoneNumber.Trim()))
                 return Result.Failure(Messages.ExistEmployee, ResultStatus.Failed);
+
             Employee newEmployee = _mapper.Map<Employee>(employee); 
+            newEmployee.Passowrd = passwordService.HashPassword(newEmployee.Passowrd);
 
             await unitOfWork.EmployeeRepo.AddAsync(newEmployee);
 

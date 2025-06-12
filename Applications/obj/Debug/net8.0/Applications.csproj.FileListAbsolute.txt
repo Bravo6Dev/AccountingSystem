@@ -15,3 +15,4 @@ C:\Users\DELL\Desktop\Projects\PersonalProjects\AccountingSystem\Applications\bi
 C:\Users\DELL\Desktop\Projects\PersonalProjects\AccountingSystem\Applications\bin\Debug\net8.0\Infrastructure.pdb
 C:\Users\DELL\Desktop\Projects\PersonalProjects\AccountingSystem\Applications\obj\Debug\net8.0\Applications.csproj.AssemblyReference.cache
 C:\Users\DELL\Desktop\Projects\PersonalProjects\AccountingSystem\Applications\obj\Debug\net8.0\Applications.csproj.CopyComplete
+C:\Users\DELL\Desktop\Projects\PersonalProjects\AccountingSystem\Applications\obj\Debug\net8.0\Applications.sourcelink.json
