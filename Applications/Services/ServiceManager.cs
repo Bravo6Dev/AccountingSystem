@@ -12,19 +12,18 @@ namespace Applications.Services
 {
     public class ServiceManager : IServiceManager
     {
-        private readonly IUnitOfWork unitOfWork;
-        private IMapper _mapper;
-        private IPasswordService passwordService;
- 
+
         private Lazy<IEmployeeService> employeeService;
+        private Lazy<IPermissionService> permissionService;
 
         public ServiceManager(IUnitOfWork unitOfWork, IMapper mapper, IPasswordService passwordService)
         {
-            this.unitOfWork = unitOfWork;
-            this._mapper = mapper;
-            this.passwordService = passwordService;
+
             employeeService = new Lazy<IEmployeeService>(() => new EmployeeServices(unitOfWork, mapper, passwordService));
+            permissionService = new Lazy<IPermissionService>(() => new PermissionService(unitOfWork));
         }
         public IEmployeeService EmployeeService => employeeService.Value;
+
+        public IPermissionService PermissionService => permissionService.Value;
     }
 }

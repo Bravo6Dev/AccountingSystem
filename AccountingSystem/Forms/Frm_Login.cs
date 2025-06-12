@@ -19,15 +19,7 @@ namespace AccountingSystem.Forms
 {
     public partial class Frm_Login : Form
     {
-        private bool ShowPassword = false;
         private readonly IServiceManager serviceManager;
-
-        private void HandleshowPassword()
-        {
-            ShowPassword = !ShowPassword;
-            txtPassword.UseSystemPasswordChar = !ShowPassword;
-            txtPassword.IconLeft = ShowPassword ? Resources.visibility_off : Resources.visibility;
-        }
 
         private async Task LoadUsersAsync()
         {
@@ -80,11 +72,6 @@ namespace AccountingSystem.Forms
         {
             InitializeComponent();
             this.serviceManager = serviceManager;
-        }
-
-        private void txtPassword_IconLeftClick(object sender, EventArgs e)
-        {
-            HandleshowPassword();
         }
 
         private async void btnLogin_Click(object sender, EventArgs e)

@@ -178,3 +178,5 @@ C:\Users\DELL\Desktop\Projects\PersonalProjects\AccountingSystem\AccountingSyste
 C:\Users\DELL\Desktop\Projects\PersonalProjects\AccountingSystem\AccountingSystem\bin\Debug\net8.0-windows\System.Management.dll
 C:\Users\DELL\Desktop\Projects\PersonalProjects\AccountingSystem\AccountingSystem\bin\Debug\net8.0-windows\runtimes\win\lib\net7.0\System.Management.dll
 C:\Users\DELL\Desktop\Projects\PersonalProjects\AccountingSystem\AccountingSystem\obj\Debug\net8.0-windows\AccountingSystem.Controls.TopBar.resources
+C:\Users\DELL\Desktop\Projects\PersonalProjects\AccountingSystem\AccountingSystem\obj\Debug\net8.0-windows\AccountingSystem.Controls.AddEditEmployee.resources
+C:\Users\DELL\Desktop\Projects\PersonalProjects\AccountingSystem\AccountingSystem\obj\Debug\net8.0-windows\AccountingSystem.Controls.PasswordTextBox.resources

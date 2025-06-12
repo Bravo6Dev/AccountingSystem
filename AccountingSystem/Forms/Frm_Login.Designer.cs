@@ -33,13 +33,15 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Login));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             topBar1 = new Controls.TopBar();
-            txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             btnLogin = new Guna.UI2.WinForms.Guna2Button();
             lblError = new Label();
             cmbUsers = new Guna.UI2.WinForms.Guna2ComboBox();
+            pictureBox1 = new PictureBox();
+            txtPassword = new Controls.PasswordTextBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // topBar1
@@ -53,37 +55,11 @@
             topBar1.TabIndex = 0;
             topBar1.Title = "تسجيل الدخول";
             // 
-            // txtPassword
-            // 
-            txtPassword.BorderRadius = 10;
-            txtPassword.CustomizableEdges = customizableEdges1;
-            txtPassword.DefaultText = "";
-            txtPassword.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtPassword.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtPassword.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtPassword.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtPassword.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtPassword.Font = new Font("Segoe UI", 12F);
-            txtPassword.ForeColor = Color.Black;
-            txtPassword.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtPassword.IconLeft = Properties.Resources.visibility;
-            txtPassword.Location = new Point(68, 268);
-            txtPassword.Margin = new Padding(4);
-            txtPassword.Name = "txtPassword";
-            txtPassword.PlaceholderForeColor = Color.Black;
-            txtPassword.PlaceholderText = "كلمة المرور";
-            txtPassword.SelectedText = "";
-            txtPassword.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            txtPassword.Size = new Size(507, 41);
-            txtPassword.TabIndex = 1;
-            txtPassword.UseSystemPasswordChar = true;
-            txtPassword.IconLeftClick += txtPassword_IconLeftClick;
-            // 
             // btnLogin
             // 
             btnLogin.BorderRadius = 10;
             btnLogin.Cursor = Cursors.Hand;
-            btnLogin.CustomizableEdges = customizableEdges3;
+            btnLogin.CustomizableEdges = customizableEdges1;
             btnLogin.DisabledState.BorderColor = Color.DarkGray;
             btnLogin.DisabledState.CustomBorderColor = Color.DarkGray;
             btnLogin.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -93,7 +69,7 @@
             btnLogin.ForeColor = Color.White;
             btnLogin.Location = new Point(228, 354);
             btnLogin.Name = "btnLogin";
-            btnLogin.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnLogin.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnLogin.Size = new Size(198, 47);
             btnLogin.TabIndex = 2;
             btnLogin.Text = " تسجيل الدخول";
@@ -115,19 +91,55 @@
             // 
             cmbUsers.BackColor = Color.Transparent;
             cmbUsers.BorderRadius = 10;
-            cmbUsers.CustomizableEdges = customizableEdges5;
+            cmbUsers.CustomizableEdges = customizableEdges3;
             cmbUsers.DrawMode = DrawMode.OwnerDrawFixed;
             cmbUsers.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbUsers.FocusedColor = Color.FromArgb(94, 148, 255);
             cmbUsers.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            cmbUsers.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cmbUsers.Font = new Font("Segoe UI", 12F);
             cmbUsers.ForeColor = Color.Black;
             cmbUsers.ItemHeight = 30;
-            cmbUsers.Location = new Point(68, 203);
+            cmbUsers.Location = new Point(69, 226);
             cmbUsers.Name = "cmbUsers";
-            cmbUsers.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            cmbUsers.ShadowDecoration.CustomizableEdges = customizableEdges4;
             cmbUsers.Size = new Size(507, 36);
             cmbUsers.TabIndex = 4;
+            cmbUsers.TextAlign = HorizontalAlignment.Right;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Location = new Point(244, 61);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(174, 118);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 5;
+            pictureBox1.TabStop = false;
+            // 
+            // txtPassword
+            // 
+            txtPassword.BorderRadius = 10;
+            txtPassword.CustomizableEdges = customizableEdges5;
+            txtPassword.DefaultText = "";
+            txtPassword.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtPassword.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtPassword.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtPassword.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtPassword.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtPassword.Font = new Font("Segoe UI", 12F);
+            txtPassword.ForeColor = Color.Black;
+            txtPassword.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtPassword.IconLeft = (Image)resources.GetObject("txtPassword.IconLeft");
+            txtPassword.IconLeftCursor = Cursors.Hand;
+            txtPassword.Location = new Point(69, 288);
+            txtPassword.Margin = new Padding(4);
+            txtPassword.Name = "txtPassword";
+            txtPassword.PlaceholderText = "كلمة المرور";
+            txtPassword.RightToLeft = RightToLeft.Yes;
+            txtPassword.SelectedText = "";
+            txtPassword.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            txtPassword.Size = new Size(507, 36);
+            txtPassword.TabIndex = 6;
+            txtPassword.UseSystemPasswordChar = true;
             // 
             // Frm_Login
             // 
@@ -135,10 +147,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(662, 470);
+            Controls.Add(txtPassword);
+            Controls.Add(pictureBox1);
             Controls.Add(cmbUsers);
             Controls.Add(lblError);
             Controls.Add(btnLogin);
-            Controls.Add(txtPassword);
             Controls.Add(topBar1);
             Font = new Font("Arial Narrow", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.None;
@@ -150,15 +163,17 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Frm_Login";
             Load += Frm_Login_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Controls.TopBar topBar1;
-        private Guna.UI2.WinForms.Guna2TextBox txtPassword;
         private Guna.UI2.WinForms.Guna2Button btnLogin;
         private Label lblError;
         private Guna.UI2.WinForms.Guna2ComboBox cmbUsers;
+        private PictureBox pictureBox1;
+        private Controls.PasswordTextBox txtPassword;
     }
 }

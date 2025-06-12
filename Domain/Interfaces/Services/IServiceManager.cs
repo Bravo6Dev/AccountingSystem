@@ -9,5 +9,6 @@ namespace Domain.Interfaces.Services
     public interface IServiceManager
     {
         public IEmployeeService EmployeeService { get; }
+        public IPermissionService PermissionService { get; }
     }
 }
