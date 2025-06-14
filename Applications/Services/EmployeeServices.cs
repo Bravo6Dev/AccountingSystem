@@ -58,6 +58,13 @@ namespace Applications.Services
             return Result<IEnumerable<EmployeeDto>>.Success(employees, ResultStatus.Success);
         }
 
+        public async Task<Result<PaginationResponse<EmployeeDto>>> GetEmployees(int page, int pageSize = 10)
+        {
+            PaginationResponse<EmployeeDto> data = await unitOfWork.EmployeeRepo.GetAllAsync<EmployeeDto>(page, pageSize,
+                   _mapper.ConfigurationProvider);
+            return Result<PaginationResponse<EmployeeDto>>.Success(data, ResultStatus.Success);
+        }
+
         public async Task<Result> Login(LoginDto login, CancellationToken cancellationToken)
         {
             string? Password = await unitOfWork.EmployeeRepo.GetFirstOrDefaultAsync<string>(e => e.Passowrd,

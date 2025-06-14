@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Update="Controls\AddEditEmployee.cs">
+    <Compile Update="Controls\EmployeesPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Controls\NumericTextBox.cs">
@@ -13,10 +13,13 @@
     <Compile Update="Controls\TopBar.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Forms\Employees\Frm_Employee.cs">
+    <Compile Update="Forms\Employees\Frm_AddEditEmplyee.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Forms\Frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Frm_MainLayout.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

@@ -22,7 +22,8 @@ namespace Applications.Services
 
         public async Task<Result<IEnumerable<Permission>>> GetPermissions()
         {
-            IEnumerable<Permission> data = await unitOfWork.PermissionRepo.GetAllAsync();
+            IEnumerable<Permission> data = await unitOfWork.PermissionRepo.GetAllAsync(asNoTracking:true);
+
             return Result<IEnumerable<Permission>>.Success(data, Domain.Enums.ResultStatus.Success);
         }
     }

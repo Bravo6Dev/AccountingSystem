@@ -1,0 +1,298 @@
+﻿namespace AccountingSystem.Controls
+{
+    partial class EmployeesPage
+    {
+        /// <summary> 
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary> 
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Component Designer generated code
+
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            gpFilter = new Guna.UI2.WinForms.Guna2GroupBox();
+            btnAddNew = new Guna.UI2.WinForms.Guna2Button();
+            txtFilter = new Guna.UI2.WinForms.Guna2TextBox();
+            paginationInfo = new Panel();
+            lblPagInfo = new Label();
+            btnPrev = new Guna.UI2.WinForms.Guna2ImageButton();
+            btnNext = new Guna.UI2.WinForms.Guna2ImageButton();
+            panel2 = new Panel();
+            picLoading = new PictureBox();
+            dgvEmployees = new Guna.UI2.WinForms.Guna2DataGridView();
+            gpFilter.SuspendLayout();
+            paginationInfo.SuspendLayout();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)picLoading).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvEmployees).BeginInit();
+            SuspendLayout();
+            // 
+            // gpFilter
+            // 
+            gpFilter.BorderColor = Color.White;
+            gpFilter.Controls.Add(btnAddNew);
+            gpFilter.Controls.Add(txtFilter);
+            gpFilter.CustomBorderColor = Color.White;
+            gpFilter.CustomizableEdges = customizableEdges13;
+            gpFilter.Dock = DockStyle.Top;
+            gpFilter.Font = new Font("Segoe UI", 9F);
+            gpFilter.ForeColor = Color.FromArgb(125, 137, 149);
+            gpFilter.Location = new Point(0, 0);
+            gpFilter.Name = "gpFilter";
+            gpFilter.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            gpFilter.Size = new Size(901, 80);
+            gpFilter.TabIndex = 1;
+            // 
+            // btnAddNew
+            // 
+            btnAddNew.BackColor = Color.Transparent;
+            btnAddNew.BorderRadius = 10;
+            btnAddNew.Cursor = Cursors.Hand;
+            btnAddNew.CustomizableEdges = customizableEdges9;
+            btnAddNew.DisabledState.BorderColor = Color.DarkGray;
+            btnAddNew.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnAddNew.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnAddNew.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnAddNew.FillColor = Color.FromArgb(37, 99, 235);
+            btnAddNew.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnAddNew.ForeColor = Color.White;
+            btnAddNew.Location = new Point(714, 24);
+            btnAddNew.Name = "btnAddNew";
+            btnAddNew.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btnAddNew.Size = new Size(169, 43);
+            btnAddNew.TabIndex = 1;
+            btnAddNew.Text = "اضافة موظف جديد";
+            btnAddNew.Click += btnAddNew_Click;
+            // 
+            // txtFilter
+            // 
+            txtFilter.CustomizableEdges = customizableEdges11;
+            txtFilter.DefaultText = "";
+            txtFilter.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtFilter.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtFilter.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtFilter.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtFilter.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtFilter.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtFilter.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtFilter.IconLeft = Properties.Resources.search;
+            txtFilter.IconLeftCursor = Cursors.Hand;
+            txtFilter.IconLeftSize = new Size(24, 24);
+            txtFilter.Location = new Point(21, 24);
+            txtFilter.Margin = new Padding(4);
+            txtFilter.Name = "txtFilter";
+            txtFilter.PlaceholderText = "الاسم او رقم الهاتف";
+            txtFilter.SelectedText = "";
+            txtFilter.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            txtFilter.Size = new Size(294, 43);
+            txtFilter.TabIndex = 0;
+            // 
+            // paginationInfo
+            // 
+            paginationInfo.BackColor = Color.White;
+            paginationInfo.Controls.Add(lblPagInfo);
+            paginationInfo.Controls.Add(btnPrev);
+            paginationInfo.Controls.Add(btnNext);
+            paginationInfo.Dock = DockStyle.Bottom;
+            paginationInfo.Location = new Point(0, 542);
+            paginationInfo.Name = "paginationInfo";
+            paginationInfo.Padding = new Padding(5);
+            paginationInfo.Size = new Size(901, 53);
+            paginationInfo.TabIndex = 2;
+            // 
+            // lblPagInfo
+            // 
+            lblPagInfo.BackColor = Color.FromArgb(230, 230, 230);
+            lblPagInfo.Dock = DockStyle.Fill;
+            lblPagInfo.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblPagInfo.ForeColor = Color.FromArgb(50, 50, 50);
+            lblPagInfo.Location = new Point(69, 5);
+            lblPagInfo.Name = "lblPagInfo";
+            lblPagInfo.Size = new Size(763, 43);
+            lblPagInfo.TabIndex = 2;
+            lblPagInfo.Text = "0/0";
+            lblPagInfo.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // btnPrev
+            // 
+            btnPrev.CheckedState.ImageSize = new Size(64, 64);
+            btnPrev.Cursor = Cursors.Hand;
+            btnPrev.Dock = DockStyle.Left;
+            btnPrev.HoverState.ImageSize = new Size(32, 32);
+            btnPrev.Image = Properties.Resources.arrow_back;
+            btnPrev.ImageOffset = new Point(0, 0);
+            btnPrev.ImageRotate = 0F;
+            btnPrev.ImageSize = new Size(32, 32);
+            btnPrev.Location = new Point(5, 5);
+            btnPrev.Name = "btnPrev";
+            btnPrev.PressedState.ImageSize = new Size(32, 32);
+            btnPrev.ShadowDecoration.CustomizableEdges = customizableEdges15;
+            btnPrev.Size = new Size(64, 43);
+            btnPrev.TabIndex = 1;
+            // 
+            // btnNext
+            // 
+            btnNext.CheckedState.ImageSize = new Size(64, 64);
+            btnNext.Cursor = Cursors.Hand;
+            btnNext.Dock = DockStyle.Right;
+            btnNext.HoverState.ImageSize = new Size(32, 32);
+            btnNext.Image = Properties.Resources.arrow;
+            btnNext.ImageOffset = new Point(0, 0);
+            btnNext.ImageRotate = 0F;
+            btnNext.ImageSize = new Size(32, 32);
+            btnNext.Location = new Point(832, 5);
+            btnNext.Name = "btnNext";
+            btnNext.PressedState.ImageSize = new Size(32, 32);
+            btnNext.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            btnNext.Size = new Size(64, 43);
+            btnNext.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(picLoading);
+            panel2.Controls.Add(dgvEmployees);
+            panel2.Dock = DockStyle.Fill;
+            panel2.Location = new Point(0, 80);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(901, 462);
+            panel2.TabIndex = 4;
+            // 
+            // picLoading
+            // 
+            picLoading.BackColor = Color.White;
+            picLoading.Image = Properties.Resources.Loading;
+            picLoading.Location = new Point(404, 185);
+            picLoading.Name = "picLoading";
+            picLoading.Size = new Size(93, 68);
+            picLoading.SizeMode = PictureBoxSizeMode.Zoom;
+            picLoading.TabIndex = 2;
+            picLoading.TabStop = false;
+            // 
+            // dgvEmployees
+            // 
+            dgvEmployees.AllowUserToAddRows = false;
+            dgvEmployees.AllowUserToDeleteRows = false;
+            dgvEmployees.AllowUserToResizeColumns = false;
+            dgvEmployees.AllowUserToResizeRows = false;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(249, 250, 251);
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 12F);
+            dataGridViewCellStyle5.ForeColor = Color.FromArgb(17, 24, 39);
+            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(249, 250, 251);
+            dataGridViewCellStyle5.SelectionForeColor = Color.FromArgb(17, 24, 39);
+            dgvEmployees.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = Color.FromArgb(249, 250, 251);
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            dataGridViewCellStyle6.ForeColor = Color.FromArgb(17, 24, 39);
+            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(249, 250, 251);
+            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(17, 24, 39);
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
+            dgvEmployees.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dgvEmployees.ColumnHeadersHeight = 40;
+            dgvEmployees.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = Color.White;
+            dataGridViewCellStyle7.Font = new Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle7.ForeColor = Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = Color.White;
+            dataGridViewCellStyle7.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.False;
+            dgvEmployees.DefaultCellStyle = dataGridViewCellStyle7;
+            dgvEmployees.Dock = DockStyle.Fill;
+            dgvEmployees.GridColor = Color.LightGray;
+            dgvEmployees.Location = new Point(0, 0);
+            dgvEmployees.Name = "dgvEmployees";
+            dgvEmployees.ReadOnly = true;
+            dgvEmployees.RowHeadersVisible = false;
+            dataGridViewCellStyle8.Font = new Font("Segoe UI", 12F);
+            dgvEmployees.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dgvEmployees.RowTemplate.Height = 40;
+            dgvEmployees.Size = new Size(901, 462);
+            dgvEmployees.TabIndex = 3;
+            dgvEmployees.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            dgvEmployees.ThemeStyle.AlternatingRowsStyle.Font = null;
+            dgvEmployees.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            dgvEmployees.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            dgvEmployees.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            dgvEmployees.ThemeStyle.BackColor = Color.White;
+            dgvEmployees.ThemeStyle.GridColor = Color.LightGray;
+            dgvEmployees.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
+            dgvEmployees.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvEmployees.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 10.5F);
+            dgvEmployees.ThemeStyle.HeaderStyle.ForeColor = Color.White;
+            dgvEmployees.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dgvEmployees.ThemeStyle.HeaderStyle.Height = 40;
+            dgvEmployees.ThemeStyle.ReadOnly = true;
+            dgvEmployees.ThemeStyle.RowsStyle.BackColor = Color.White;
+            dgvEmployees.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvEmployees.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 10.5F);
+            dgvEmployees.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
+            dgvEmployees.ThemeStyle.RowsStyle.Height = 40;
+            dgvEmployees.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dgvEmployees.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dgvEmployees.CellMouseLeave += dgvEmployees_CellMouseLeave;
+            dgvEmployees.CellMouseMove += dgvEmployees_CellMouseMove;
+            // 
+            // EmployeesPage
+            // 
+            AutoScaleDimensions = new SizeF(8F, 19F);
+            AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(panel2);
+            Controls.Add(paginationInfo);
+            Controls.Add(gpFilter);
+            Name = "EmployeesPage";
+            RightToLeft = RightToLeft.Yes;
+            Size = new Size(901, 595);
+            Load += Employees_Load;
+            gpFilter.ResumeLayout(false);
+            paginationInfo.ResumeLayout(false);
+            panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)picLoading).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvEmployees).EndInit();
+            ResumeLayout(false);
+        }
+
+        #endregion
+        private Guna.UI2.WinForms.Guna2GroupBox gpFilter;
+        private Guna.UI2.WinForms.Guna2TextBox txtFilter;
+        private Guna.UI2.WinForms.Guna2Button btnAddNew;
+        private Panel paginationInfo;
+        private Panel panel2;
+        private PictureBox picLoading;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvEmployees;
+        private Guna.UI2.WinForms.Guna2ImageButton btnNext;
+        private Guna.UI2.WinForms.Guna2ImageButton btnPrev;
+        private Label lblPagInfo;
+    }
+}

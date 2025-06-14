@@ -58,9 +58,9 @@ namespace AccountingSystem.Forms
                     return;
                 }
 
-                // For test
-                lblError.Visible = true;
-                lblError.Text = "Done";
+                Frm_MainLayout mainLayout = new Frm_MainLayout(this, serviceManager);
+                this.Hide();
+                mainLayout.ShowDialog();
             } catch
             {
                 lblError.Visible = true;

@@ -14,6 +14,5 @@ namespace Domain.DTOs.Employees
         public decimal Salary { get; set; }
         public DateTime CreateDate { get; set; }
         public string Permission { get; set; } = string.Empty;
-        public string CashBoxName { get; set; } = string.Empty;
     }
 }

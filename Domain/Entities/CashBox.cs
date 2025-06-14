@@ -10,8 +10,6 @@ public partial class CashBox
     public int Id { get; set; }
     public string Name { get; set; } = string.Empty;
     public decimal Balance { get; set; }
-    [ForeignKey("Employee")]
-    public int EmployeeId { get; set; }  
     public DateTime? CreateDate { get; set; }
     public DataStatus Status { get; set; }
 

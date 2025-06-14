@@ -45,20 +45,21 @@
             btnClose.ImageSize = new Size(32, 32);
             btnClose.Location = new Point(753, 0);
             btnClose.Name = "btnClose";
-            btnClose.PressedState.ImageSize = new Size(64, 64);
+            btnClose.PressedState.ImageSize = new Size(32, 32);
             btnClose.ShadowDecoration.CustomizableEdges = customizableEdges1;
             btnClose.Size = new Size(32, 45);
             btnClose.TabIndex = 1;
             // 
             // lblTitle
             // 
-            lblTitle.AutoSize = true;
+            lblTitle.Dock = DockStyle.Fill;
             lblTitle.Font = new Font("Almarai", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblTitle.Location = new Point(0, 9);
+            lblTitle.Location = new Point(0, 0);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(42, 25);
+            lblTitle.Size = new Size(753, 45);
             lblTitle.TabIndex = 2;
             lblTitle.Text = "Title";
+            lblTitle.TextAlign = ContentAlignment.MiddleRight;
             // 
             // TopBar
             // 
@@ -70,7 +71,6 @@
             RightToLeft = RightToLeft.Yes;
             Size = new Size(785, 45);
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion

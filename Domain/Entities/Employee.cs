@@ -15,7 +15,6 @@ public partial class Employee
     public DataStatus Status { get; set; }
     public int PermissionId { get; set; }
 
-    public virtual CashBox? CashBox { get; set; } 
     public virtual Permission Permission { get; set; } = null!;
 }
 

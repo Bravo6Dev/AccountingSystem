@@ -14,6 +14,5 @@ namespace Domain.DTOs.Employees
         public string Password { get; set; } = string.Empty;
         public decimal Salary  { get; set; }
         public int PermissionId { get; set; }
-        public NewCashBoxDto CashBox { get; set; } = null!;
     }
 }

@@ -1,11 +1,10 @@
-﻿using Applications.Util;
-using Domain.DTOs;
+﻿using Applications.Services;
 using Domain.DTOs.CashBoxes;
 using Domain.DTOs.Employees;
+using Domain.DTOs;
 using Domain.Entities;
 using Domain.Enums;
 using Domain.Interfaces.Services;
-using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,18 +14,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Applications.Util;
 
-namespace AccountingSystem.Controls
+namespace AccountingSystem.Forms.Employees
 {
-    public partial class AddEditEmployee : UserControl
+    public partial class Frm_AddEditEmplyee : Form
     {
         private readonly IServiceManager serviceManager;
+
+        private string MapPermission(string permission)
+        {
+            return permission switch
+            {
+                "SuperAdmin" => "مشرف عام",
+                "Admin" => "مدير",
+                "User" => "مستخدم",
+                _ => "غير معروف"
+            };
+        }
 
         private async Task LoadPermissionAsync()
         {
             try
             {
                 Result<IEnumerable<Permission>> result = await serviceManager.PermissionService.GetPermissions();
+
+                result.Data?.ToList().ForEach(permission => { permission.Name = MapPermission(permission.Name); });
 
                 if (result.Status == ResultStatus.Success)
                 {
@@ -52,7 +65,6 @@ namespace AccountingSystem.Controls
             txtPhoneNumber.Text = string.Empty;
             txtSalary.Text = string.Empty;
             cmbPermission.SelectedIndex = 0;
-            txtName.Text = string.Empty;
         }
 
         private async Task HandleAddNew()
@@ -65,11 +77,7 @@ namespace AccountingSystem.Controls
                     Password = txtPassword.Text.Trim(),
                     PhoneNumber = txtPhoneNumber.Text.Trim(),
                     Salary = decimal.Parse(txtSalary.Text.Trim()),
-                    PermissionId = Convert.ToInt32(cmbPermission.SelectedValue),
-                    CashBox = new NewCashBoxDto
-                    {
-                        Name = txtName.Text.Trim(),
-                    }
+                    PermissionId = Convert.ToInt32(cmbPermission.SelectedValue)
                 };
 
                 Result addNewResult = await serviceManager.EmployeeService.AddNewEmployee(employee, CancellationToken.None);
@@ -83,25 +91,19 @@ namespace AccountingSystem.Controls
             }
             catch
             {
-                MessageBox.Show(Messages.ServerError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(Messages.ServerError, "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        public AddEditEmployee(IServiceManager serviceManager)
+        public Frm_AddEditEmplyee(IServiceManager serviceManager)
         {
             InitializeComponent();
             this.serviceManager = serviceManager;
         }
 
-        public AddEditEmployee()
+        private async void Frm_AddEditEmplyee_Load(object sender, EventArgs e)
         {
-            InitializeComponent();
-        }
-
-        private async void AddEditEmployee_Load(object sender, EventArgs e)
-        {
-            if (serviceManager != null)
-                await LoadPermissionAsync();
+            await LoadPermissionAsync();
         }
 
         private async void btnAdd_Click(object sender, EventArgs e)
