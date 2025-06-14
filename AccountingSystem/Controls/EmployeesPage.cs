@@ -19,6 +19,11 @@ namespace AccountingSystem.Controls
         private bool hasPrev = false;
         private bool actionsSetupDone = false;
 
+        private DataGridViewCell hoveredCell = null;
+        private int hoveredRowIndex = -1;
+
+
+
         public EmployeesPage(IServiceManager serviceManager)
         {
             InitializeComponent();
@@ -29,6 +34,33 @@ namespace AccountingSystem.Controls
         {
             InitializeComponent();
         }
+
+        private async Task DeleteEmployeeAsync(int id)
+        {
+            try
+            {
+                var confirm = MessageBox.Show("هل أنت متأكد من حذف هذا الموظف؟", "تأكيد الحذف", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (confirm != DialogResult.Yes)
+                    return;
+
+                var result = await serviceManager.EmployeeService.DeleteEmplyoee(id);
+
+                if (result.Status == Domain.Enums.ResultStatus.Failed)
+                {
+                    MessageBox.Show(result.Error ?? "فشل في حذف الموظف", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("تم حذف الموظف بنجاح", "تم", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    await LoadEmployeesAsync(); 
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("حصل خطأ أثناء حذف الموظف.\n" + ex.Message, "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
 
         private void SetupDataGridViewColumns()
         {
@@ -77,7 +109,10 @@ namespace AccountingSystem.Controls
             };
             dgvEmployees.Columns.Add(deleteColumn);
 
+            dgvEmployees.ClearSelection();
+
             actionsSetupDone = true;
+
         }
 
         private void UpdatePaginationButtons(bool hasPrev, bool hasNext)
@@ -127,7 +162,7 @@ namespace AccountingSystem.Controls
                 }
                 else
                 {
-                    MessageBox.Show("فشل في تحميل الموظفين.", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("فشل في تحميل الموظفين", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch
@@ -166,7 +201,53 @@ namespace AccountingSystem.Controls
 
         private void dgvEmployees_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
         {
-            dgvEmployees.Cursor = Cursors.Default;
+            if (hoveredCell != null)
+            {
+                hoveredCell.Style.BackColor = dgvEmployees.DefaultCellStyle.BackColor;
+                hoveredCell = null;
+                dgvEmployees.Cursor = Cursors.Default;
+            }
         }
+
+        private async void dgvEmployees_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0 || e.ColumnIndex < 0)
+                return;
+
+            var selectedRow = dgvEmployees.Rows[e.RowIndex];
+            var employeeId = selectedRow.Cells["Id"].Value?.ToString(); 
+            if (string.IsNullOrEmpty(employeeId))
+                return;
+
+            var columnName = dgvEmployees.Columns[e.ColumnIndex].Name;
+
+            switch (columnName)
+            {
+                case "ShowInfo":
+                    break;
+
+                case "Edit":
+                    break;
+
+                case "Delete":
+                    await DeleteEmployeeAsync(Convert.ToInt32(employeeId));
+                    break;
+            }
+        }
+
+        private void dgvEmployees_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                var column = dgvEmployees.Columns[e.ColumnIndex];
+                if (column.Name == "Edit" || column.Name == "Delete" || column.Name == "ShowInfo")
+                {
+                    hoveredCell = dgvEmployees.Rows[e.RowIndex].Cells[e.ColumnIndex];
+                    hoveredCell.Style.BackColor = ColorTranslator.FromHtml("#E2E8F0"); 
+                    dgvEmployees.Cursor = Cursors.Hand;
+                }
+            }
+        }
+
     }
 }

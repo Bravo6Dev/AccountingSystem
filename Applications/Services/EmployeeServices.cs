@@ -43,6 +43,14 @@ namespace Applications.Services
             return Result.Success(ResultStatus.Success);
         }
 
+        public async Task<Result> DeleteEmplyoee(int id)
+        {
+            int rowEffect = await unitOfWork.EmployeeRepo.BulkDeleteAsync(e => e.Id == id);
+            if (rowEffect <= 0)
+                return Result.Failure(Messages.SqlError, ResultStatus.Failed);
+            return Result.Success(ResultStatus.Success);
+        }
+
         public async Task<Result<EmployeeDto>> GetEmployeeById(int id, CancellationToken cancellationToken)
         {
             EmployeeDto? employee = await unitOfWork.EmployeeRepo.GetFirstOrDefaultAsync<EmployeeDto>(_mapper.ConfigurationProvider,
@@ -76,6 +84,11 @@ namespace Applications.Services
                 return Result.Failure(Messages.WrongCredentials, ResultStatus.Failed);
 
             return Result.Success(ResultStatus.Success);
+        }
+
+        public Task<Result> UpdateEmplyee(int id, NewEmployee employee)
+        {
+            throw new NotImplementedException();
         }
     }
 }
