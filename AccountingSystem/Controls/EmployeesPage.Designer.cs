@@ -44,8 +44,8 @@
             btnAddNew = new Guna.UI2.WinForms.Guna2Button();
             txtFilter = new Guna.UI2.WinForms.Guna2TextBox();
             paginationInfo = new Panel();
-            lblPagInfo = new Label();
             btnPrev = new Guna.UI2.WinForms.Guna2ImageButton();
+            lblPagInfo = new Label();
             btnNext = new Guna.UI2.WinForms.Guna2ImageButton();
             panel2 = new Panel();
             picLoading = new PictureBox();
@@ -59,10 +59,11 @@
             // 
             // gpFilter
             // 
-            gpFilter.BorderColor = Color.White;
+            gpFilter.BackColor = Color.White;
+            gpFilter.BorderColor = Color.Transparent;
             gpFilter.Controls.Add(btnAddNew);
             gpFilter.Controls.Add(txtFilter);
-            gpFilter.CustomBorderColor = Color.White;
+            gpFilter.CustomBorderColor = Color.Transparent;
             gpFilter.CustomizableEdges = customizableEdges5;
             gpFilter.Dock = DockStyle.Top;
             gpFilter.Font = new Font("Segoe UI", 9F);
@@ -75,22 +76,19 @@
             // 
             // btnAddNew
             // 
-            btnAddNew.BackColor = Color.Transparent;
+            btnAddNew.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnAddNew.BorderRadius = 10;
             btnAddNew.Cursor = Cursors.Hand;
             btnAddNew.CustomizableEdges = customizableEdges1;
-            btnAddNew.DisabledState.BorderColor = Color.DarkGray;
-            btnAddNew.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnAddNew.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnAddNew.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnAddNew.FillColor = Color.FromArgb(37, 99, 235);
-            btnAddNew.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnAddNew.FillColor = Color.FromArgb(0, 123, 255);
+            btnAddNew.Font = new Font("Segoe UI", 12F);
             btnAddNew.ForeColor = Color.White;
-            btnAddNew.Location = new Point(714, 24);
+            btnAddNew.HoverState.FillColor = Color.FromArgb(0, 105, 217);
+            btnAddNew.Location = new Point(652, 23);
             btnAddNew.Name = "btnAddNew";
             btnAddNew.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnAddNew.Size = new Size(169, 43);
-            btnAddNew.TabIndex = 1;
+            btnAddNew.Size = new Size(180, 40);
+            btnAddNew.TabIndex = 0;
             btnAddNew.Text = "اضافة موظف جديد";
             btnAddNew.Click += btnAddNew_Click;
             // 
@@ -101,18 +99,18 @@
             txtFilter.CustomizableEdges = customizableEdges3;
             txtFilter.DefaultText = "";
             txtFilter.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtFilter.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             txtFilter.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtFilter.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtFilter.FillColor = Color.WhiteSmoke;
             txtFilter.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtFilter.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtFilter.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtFilter.IconLeft = Properties.Resources.search;
             txtFilter.IconLeftCursor = Cursors.Hand;
             txtFilter.IconLeftSize = new Size(24, 24);
-            txtFilter.Location = new Point(21, 24);
+            txtFilter.Location = new Point(20, 20);
             txtFilter.Margin = new Padding(4);
             txtFilter.Name = "txtFilter";
+            txtFilter.PlaceholderForeColor = Color.Gray;
             txtFilter.PlaceholderText = "الاسم او رقم الهاتف";
             txtFilter.SelectedText = "";
             txtFilter.ShadowDecoration.CustomizableEdges = customizableEdges4;
@@ -122,62 +120,60 @@
             // paginationInfo
             // 
             paginationInfo.BackColor = Color.White;
-            paginationInfo.Controls.Add(lblPagInfo);
             paginationInfo.Controls.Add(btnPrev);
+            paginationInfo.Controls.Add(lblPagInfo);
             paginationInfo.Controls.Add(btnNext);
             paginationInfo.Dock = DockStyle.Bottom;
-            paginationInfo.Location = new Point(0, 542);
+            paginationInfo.Location = new Point(0, 545);
             paginationInfo.Name = "paginationInfo";
             paginationInfo.Padding = new Padding(5);
-            paginationInfo.Size = new Size(901, 53);
-            paginationInfo.TabIndex = 2;
-            // 
-            // lblPagInfo
-            // 
-            lblPagInfo.BackColor = Color.FromArgb(230, 230, 230);
-            lblPagInfo.Dock = DockStyle.Fill;
-            lblPagInfo.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblPagInfo.ForeColor = Color.FromArgb(50, 50, 50);
-            lblPagInfo.Location = new Point(69, 5);
-            lblPagInfo.Name = "lblPagInfo";
-            lblPagInfo.Size = new Size(763, 43);
-            lblPagInfo.TabIndex = 2;
-            lblPagInfo.Text = "0/0";
-            lblPagInfo.TextAlign = ContentAlignment.MiddleCenter;
+            paginationInfo.Size = new Size(901, 50);
+            paginationInfo.TabIndex = 0;
             // 
             // btnPrev
             // 
-            btnPrev.CheckedState.ImageSize = new Size(64, 64);
             btnPrev.Cursor = Cursors.Hand;
             btnPrev.Dock = DockStyle.Left;
-            btnPrev.HoverState.ImageSize = new Size(32, 32);
+            btnPrev.HoverState.ImageSize = new Size(24, 24);
             btnPrev.Image = Properties.Resources.arrow_back;
             btnPrev.ImageOffset = new Point(0, 0);
             btnPrev.ImageRotate = 0F;
-            btnPrev.ImageSize = new Size(32, 32);
+            btnPrev.ImageSize = new Size(24, 24);
             btnPrev.Location = new Point(5, 5);
             btnPrev.Name = "btnPrev";
-            btnPrev.PressedState.ImageSize = new Size(32, 32);
+            btnPrev.PressedState.ImageSize = new Size(24, 24);
             btnPrev.ShadowDecoration.CustomizableEdges = customizableEdges7;
-            btnPrev.Size = new Size(64, 43);
-            btnPrev.TabIndex = 1;
+            btnPrev.Size = new Size(64, 40);
+            btnPrev.TabIndex = 0;
+            // 
+            // lblPagInfo
+            // 
+            lblPagInfo.BackColor = Color.FromArgb(240, 240, 245);
+            lblPagInfo.Dock = DockStyle.Fill;
+            lblPagInfo.Font = new Font("Segoe UI", 14F);
+            lblPagInfo.ForeColor = Color.FromArgb(50, 50, 50);
+            lblPagInfo.Location = new Point(5, 5);
+            lblPagInfo.Name = "lblPagInfo";
+            lblPagInfo.Size = new Size(827, 40);
+            lblPagInfo.TabIndex = 1;
+            lblPagInfo.Text = "0 / 0";
+            lblPagInfo.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // btnNext
             // 
-            btnNext.CheckedState.ImageSize = new Size(64, 64);
             btnNext.Cursor = Cursors.Hand;
             btnNext.Dock = DockStyle.Right;
-            btnNext.HoverState.ImageSize = new Size(32, 32);
+            btnNext.HoverState.ImageSize = new Size(24, 24);
             btnNext.Image = Properties.Resources.arrow;
             btnNext.ImageOffset = new Point(0, 0);
             btnNext.ImageRotate = 0F;
-            btnNext.ImageSize = new Size(32, 32);
+            btnNext.ImageSize = new Size(24, 24);
             btnNext.Location = new Point(832, 5);
             btnNext.Name = "btnNext";
-            btnNext.PressedState.ImageSize = new Size(32, 32);
+            btnNext.PressedState.ImageSize = new Size(24, 24);
             btnNext.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btnNext.Size = new Size(64, 43);
-            btnNext.TabIndex = 0;
+            btnNext.Size = new Size(64, 40);
+            btnNext.TabIndex = 2;
             // 
             // panel2
             // 
@@ -186,7 +182,7 @@
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(0, 80);
             panel2.Name = "panel2";
-            panel2.Size = new Size(901, 462);
+            panel2.Size = new Size(901, 465);
             panel2.TabIndex = 4;
             // 
             // picLoading
@@ -200,7 +196,7 @@
             picLoading.TabIndex = 2;
             picLoading.TabStop = false;
             // 
-            // dgvEmployees
+            // dgvCashBoxes
             // 
             dgvEmployees.AllowUserToAddRows = false;
             dgvEmployees.AllowUserToDeleteRows = false;
@@ -234,13 +230,13 @@
             dgvEmployees.Dock = DockStyle.Fill;
             dgvEmployees.GridColor = Color.LightGray;
             dgvEmployees.Location = new Point(0, 0);
-            dgvEmployees.Name = "dgvEmployees";
+            dgvEmployees.Name = "dgvCashBoxes";
             dgvEmployees.ReadOnly = true;
             dgvEmployees.RowHeadersVisible = false;
             dataGridViewCellStyle4.Font = new Font("Segoe UI", 12F);
             dgvEmployees.RowsDefaultCellStyle = dataGridViewCellStyle4;
             dgvEmployees.RowTemplate.Height = 40;
-            dgvEmployees.Size = new Size(901, 462);
+            dgvEmployees.Size = new Size(901, 465);
             dgvEmployees.TabIndex = 3;
             dgvEmployees.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dgvEmployees.ThemeStyle.AlternatingRowsStyle.Font = null;

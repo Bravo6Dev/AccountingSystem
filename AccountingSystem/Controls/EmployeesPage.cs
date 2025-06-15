@@ -19,10 +19,7 @@ namespace AccountingSystem.Controls
         private bool hasPrev = false;
         private bool actionsSetupDone = false;
 
-        private DataGridViewCell hoveredCell = null;
-        private int hoveredRowIndex = -1;
-
-
+        private DataGridViewCell? hoveredCell = null;
 
         public EmployeesPage(IServiceManager serviceManager)
         {
@@ -57,10 +54,16 @@ namespace AccountingSystem.Controls
             }
             catch (Exception ex)
             {
-                MessageBox.Show("حصل خطأ أثناء حذف الموظف.\n" + ex.Message, "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                FormHelper.ServerError(ex);
             }
         }
 
+        private async void UpdateEmployee(EmployeeDto employee)
+        {
+            Frm_AddEditEmplyee frm = new Frm_AddEditEmplyee(serviceManager, employee);
+            frm.ShowDialog();
+            await LoadEmployeesAsync();
+        }
 
         private void SetupDataGridViewColumns()
         {
@@ -165,9 +168,9 @@ namespace AccountingSystem.Controls
                     MessageBox.Show("فشل في تحميل الموظفين", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("حصل خطأ أثناء تحميل الموظفين", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                FormHelper.ServerError(ex);
             }
         }
 
@@ -179,13 +182,13 @@ namespace AccountingSystem.Controls
 
         private async void btnAddNew_Click(object sender, EventArgs e)
         {
-            Frm_AddEditEmplyee frm_AddEditEmplyee = new Frm_AddEditEmplyee(serviceManager);
-            frm_AddEditEmplyee.ShowDialog();
-
-            picLoading.Visible = true;
-            picLoading.Image = Properties.Resources.Loading;
-
-            await LoadEmployeesAsync();
+            using (Frm_AddEditEmplyee frm_AddEditEmplyee = new Frm_AddEditEmplyee(serviceManager))
+            {
+                frm_AddEditEmplyee.ShowDialog();
+                picLoading.Visible = true;
+                picLoading.Image = Properties.Resources.Loading;
+                await LoadEmployeesAsync();
+            }
         }
 
         private void dgvEmployees_CellMouseMove(object sender, DataGridViewCellMouseEventArgs e)
@@ -215,8 +218,8 @@ namespace AccountingSystem.Controls
                 return;
 
             var selectedRow = dgvEmployees.Rows[e.RowIndex];
-            var employeeId = selectedRow.Cells["Id"].Value?.ToString(); 
-            if (string.IsNullOrEmpty(employeeId))
+            var employeeDto = selectedRow.DataBoundItem as EmployeeDto; // type حسب الـ DTO اللي انت مستخدمه
+            if (employeeDto == null)
                 return;
 
             var columnName = dgvEmployees.Columns[e.ColumnIndex].Name;
@@ -227,12 +230,15 @@ namespace AccountingSystem.Controls
                     break;
 
                 case "Edit":
+                    UpdateEmployee(employeeDto);
                     break;
 
                 case "Delete":
-                    await DeleteEmployeeAsync(Convert.ToInt32(employeeId));
+                    await DeleteEmployeeAsync(employeeDto.Id);
                     break;
             }
+
+            dgvEmployees.ClearSelection();
         }
 
         private void dgvEmployees_CellMouseEnter(object sender, DataGridViewCellEventArgs e)

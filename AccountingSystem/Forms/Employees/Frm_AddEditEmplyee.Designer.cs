@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_AddEditEmplyee));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             btnAdd = new Guna.UI2.WinForms.Guna2Button();
             topBar1 = new Controls.TopBar();
             gpEmplyeeInfo = new Guna.UI2.WinForms.Guna2GroupBox();
@@ -58,7 +58,7 @@
             // 
             btnAdd.BorderRadius = 10;
             btnAdd.Cursor = Cursors.Hand;
-            btnAdd.CustomizableEdges = customizableEdges15;
+            btnAdd.CustomizableEdges = customizableEdges1;
             btnAdd.DisabledState.BorderColor = Color.DarkGray;
             btnAdd.DisabledState.CustomBorderColor = Color.DarkGray;
             btnAdd.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -68,7 +68,7 @@
             btnAdd.ForeColor = Color.White;
             btnAdd.Location = new Point(825, 432);
             btnAdd.Name = "btnAdd";
-            btnAdd.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            btnAdd.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnAdd.Size = new Size(180, 45);
             btnAdd.TabIndex = 11;
             btnAdd.TabStop = false;
@@ -84,7 +84,7 @@
             topBar1.Size = new Size(1017, 39);
             topBar1.TabIndex = 13;
             topBar1.TabStop = false;
-            topBar1.Title = "الموظفين";
+            topBar1.Title = "اضافة موظف";
             // 
             // gpEmplyeeInfo
             // 
@@ -95,13 +95,13 @@
             gpEmplyeeInfo.Controls.Add(txtPhoneNumber);
             gpEmplyeeInfo.Controls.Add(cmbPermission);
             gpEmplyeeInfo.CustomBorderColor = Color.FromArgb(16, 99, 205);
-            gpEmplyeeInfo.CustomizableEdges = customizableEdges27;
+            gpEmplyeeInfo.CustomizableEdges = customizableEdges13;
             gpEmplyeeInfo.Dock = DockStyle.Top;
             gpEmplyeeInfo.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             gpEmplyeeInfo.ForeColor = Color.White;
             gpEmplyeeInfo.Location = new Point(0, 39);
             gpEmplyeeInfo.Name = "gpEmplyeeInfo";
-            gpEmplyeeInfo.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            gpEmplyeeInfo.ShadowDecoration.CustomizableEdges = customizableEdges14;
             gpEmplyeeInfo.ShadowDecoration.Depth = 10;
             gpEmplyeeInfo.ShadowDecoration.Enabled = true;
             gpEmplyeeInfo.Size = new Size(1017, 366);
@@ -113,7 +113,7 @@
             // txtSalary
             // 
             txtSalary.BorderRadius = 10;
-            txtSalary.CustomizableEdges = customizableEdges17;
+            txtSalary.CustomizableEdges = customizableEdges3;
             txtSalary.DefaultText = "";
             txtSalary.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtSalary.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -128,14 +128,14 @@
             txtSalary.Name = "txtSalary";
             txtSalary.PlaceholderText = "المرتب";
             txtSalary.SelectedText = "";
-            txtSalary.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            txtSalary.ShadowDecoration.CustomizableEdges = customizableEdges4;
             txtSalary.Size = new Size(257, 43);
             txtSalary.TabIndex = 3;
             // 
             // txtPassword
             // 
             txtPassword.BorderRadius = 10;
-            txtPassword.CustomizableEdges = customizableEdges19;
+            txtPassword.CustomizableEdges = customizableEdges5;
             txtPassword.DefaultText = "";
             txtPassword.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtPassword.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -153,7 +153,7 @@
             txtPassword.PlaceholderText = "كلمة المرور";
             txtPassword.RightToLeft = RightToLeft.Yes;
             txtPassword.SelectedText = "";
-            txtPassword.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            txtPassword.ShadowDecoration.CustomizableEdges = customizableEdges6;
             txtPassword.Size = new Size(404, 43);
             txtPassword.TabIndex = 1;
             txtPassword.UseSystemPasswordChar = true;
@@ -162,7 +162,7 @@
             // 
             txtUsername.BackColor = Color.White;
             txtUsername.BorderRadius = 10;
-            txtUsername.CustomizableEdges = customizableEdges21;
+            txtUsername.CustomizableEdges = customizableEdges7;
             txtUsername.DefaultText = "";
             txtUsername.Font = new Font("Segoe UI", 12F);
             txtUsername.ForeColor = Color.Black;
@@ -171,7 +171,7 @@
             txtUsername.Name = "txtUsername";
             txtUsername.PlaceholderText = "اسم المستخدم";
             txtUsername.SelectedText = "";
-            txtUsername.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            txtUsername.ShadowDecoration.CustomizableEdges = customizableEdges8;
             txtUsername.Size = new Size(404, 43);
             txtUsername.TabIndex = 0;
             // 
@@ -179,7 +179,7 @@
             // 
             txtPhoneNumber.BackColor = Color.White;
             txtPhoneNumber.BorderRadius = 10;
-            txtPhoneNumber.CustomizableEdges = customizableEdges23;
+            txtPhoneNumber.CustomizableEdges = customizableEdges9;
             txtPhoneNumber.DefaultText = "";
             txtPhoneNumber.Font = new Font("Segoe UI", 12F);
             txtPhoneNumber.ForeColor = Color.Black;
@@ -188,7 +188,7 @@
             txtPhoneNumber.Name = "txtPhoneNumber";
             txtPhoneNumber.PlaceholderText = "رقم الهاتف";
             txtPhoneNumber.SelectedText = "";
-            txtPhoneNumber.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            txtPhoneNumber.ShadowDecoration.CustomizableEdges = customizableEdges10;
             txtPhoneNumber.Size = new Size(404, 43);
             txtPhoneNumber.TabIndex = 2;
             // 
@@ -196,7 +196,7 @@
             // 
             cmbPermission.BackColor = Color.White;
             cmbPermission.BorderRadius = 10;
-            cmbPermission.CustomizableEdges = customizableEdges25;
+            cmbPermission.CustomizableEdges = customizableEdges11;
             cmbPermission.DrawMode = DrawMode.OwnerDrawFixed;
             cmbPermission.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbPermission.FocusedColor = Color.Empty;
@@ -205,7 +205,7 @@
             cmbPermission.ItemHeight = 30;
             cmbPermission.Location = new Point(851, 312);
             cmbPermission.Name = "cmbPermission";
-            cmbPermission.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            cmbPermission.ShadowDecoration.CustomizableEdges = customizableEdges12;
             cmbPermission.Size = new Size(156, 36);
             cmbPermission.TabIndex = 4;
             cmbPermission.TabStop = false;

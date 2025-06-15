@@ -12,7 +12,5 @@ public partial class CashBox
     public decimal Balance { get; set; }
     public DateTime? CreateDate { get; set; }
     public DataStatus Status { get; set; }
-
-    public virtual Employee Employee { get; set; } = null!;
 }
 

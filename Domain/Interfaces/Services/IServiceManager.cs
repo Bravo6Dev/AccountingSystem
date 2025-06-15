@@ -10,5 +10,6 @@ namespace Domain.Interfaces.Services
     {
         public IEmployeeService EmployeeService { get; }
         public IPermissionService PermissionService { get; }
+        public ICashBoxService CashBoxService { get; }
     }
 }

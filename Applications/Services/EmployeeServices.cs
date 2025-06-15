@@ -6,6 +6,7 @@ using Domain.Entities;
 using Domain.Enums;
 using Domain.Interfaces.Repos;
 using Domain.Interfaces.Services;
+using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -86,9 +87,30 @@ namespace Applications.Services
             return Result.Success(ResultStatus.Success);
         }
 
-        public Task<Result> UpdateEmplyee(int id, NewEmployee employee)
+        public async Task<Result> UpdateEmplyee(int id, NewEmployee employee)
         {
-            throw new NotImplementedException();
+            string? ExistPhoneNumber = await unitOfWork.EmployeeRepo.GetFirstOrDefaultAsync<string>(e => e.PhoneNumber,
+                    e => e.Id == id);
+
+            if (string.IsNullOrEmpty(ExistPhoneNumber))
+                return Result.Failure(string.Format(Messages.NotFound, "الموظف"), ResultStatus.Failed);
+
+            if (await unitOfWork.EmployeeRepo.IsExistAsync(e => employee.PhoneNumber.Trim() != ExistPhoneNumber 
+                && e.PhoneNumber == employee.PhoneNumber.Trim()))
+            {
+                return Result.Failure(Messages.ExistEmployee, ResultStatus.Failed);
+            }
+
+            int rowEffect = await unitOfWork.EmployeeRepo.BulkUpdateAsync(e => e.Id == id, 
+                opt => opt.SetProperty(e => e.Username, employee.Username)
+                    .SetProperty(e => e.Passowrd, passwordService.HashPassword(employee.Password))
+                    .SetProperty(e => e.PhoneNumber, employee.PhoneNumber)
+                    .SetProperty(e => e.Salary, employee.Salary)
+                    .SetProperty(e => e.PermissionId, employee.PermissionId));
+
+            if (rowEffect <= 0)
+                  return Result.Failure(Messages.SqlError, ResultStatus.Failed);
+            return Result.Success(ResultStatus.Success);
         }
     }
 }

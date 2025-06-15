@@ -72,6 +72,8 @@ namespace AccountingSystem.Forms
             ActiveNavBarButton(senderButton);
             if (senderButton == employee)
                 setMainContent(new Controls.EmployeesPage(serviceManager));
+            if (senderButton == cashBox)
+                setMainContent(new Controls.CashBoxesPage(serviceManager));
         }
     }
 }
